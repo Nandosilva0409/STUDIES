@@ -246,7 +246,7 @@ print(boas_vindas())
 '''
 
 # criando função de soma
-
+'''
 def soma():
     valor1 = 100
     valor2 = 350
@@ -258,9 +258,9 @@ def soma():
         print ('errou!')
         return False
     
-    def soma():
-     valor1 = 200
-     valor2 = 350
+def somar():
+    valor1 = 200
+    valor2 = 350
     resultado= valor1+valor2
     if resultado < 450:
         print ("resultado igual ao esperado!")
@@ -268,9 +268,36 @@ def soma():
     else:
         print ('errou!')
         return False
+
 soma()
-soma()
+somar()
+'''
+
+def calculadoraImc():
+    altura = float(input('Digite sua Altura em metros'))
+    peso = float(input("digite o seu peso"))
+    imc= peso/(altura**2)
+
+    if imc < 18.5:
+        return f"Seu peso esta baixo e seu imc é {imc}"
+    elif imc < 24.99:
+        return f"Seu peso esta normal e o seu imc é {imc} "
+    elif imc < 29.99:
+        return f'Sua peso está acima do ideal, mas não muito acima e seu imc é {imc}'
+    elif imc <= 34.99:
+        return f'Você tem obesidade grau I, seu imc é {imc}'
+    elif imc > 39.9:
+        return f'Voce tem obesidade grau II, seu imc é {imc}'
+    else:
+        return f'por favor ! todos os familiares comparecer ao hospital, pois a paciente foi obto {imc}'
+
+
+print(calculadoraImc())
     
+
+
+
+
 
 
 
