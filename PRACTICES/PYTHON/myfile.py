@@ -272,24 +272,26 @@ def somar():
 soma()
 somar()
 '''
+# indice de massa corporal (IMC)
 
 def calculadoraImc():
     altura = float(input('Digite sua Altura em metros'))
     peso = float(input("digite o seu peso"))
     imc= peso/(altura**2)
 
-    if imc < 18.5:
-        return f"Seu peso esta baixo e seu imc é {imc}"
-    elif imc < 24.99:
-        return f"Seu peso esta normal e o seu imc é {imc} "
-    elif imc < 29.99:
-        return f'Sua peso está acima do ideal, mas não muito acima e seu imc é {imc}'
-    elif imc <= 34.99:
-        return f'Você tem obesidade grau I, seu imc é {imc}'
-    elif imc > 39.9:
-        return f'Voce tem obesidade grau II, seu imc é {imc}'
-    else:
-        return f'por favor ! todos os familiares comparecer ao hospital, pois a paciente foi obto {imc}'
+   
+    if imc <= 15 and 18.5:
+        return f"Abaxo do peso , Seu imc é de : {imc}"
+    elif imc >= 18.6 and 24.9 :
+        return f"Peso normal, seu imc é de : {imc}"
+    elif imc >= 25 and 29.9:
+        return f"Acima do Peso, seu imc é de : {imc}"
+    elif imc >= 30 and 39.9:
+        return f"Obesidade grau I, seu imc é de : {imc}"
+    elif imc >= 40 :
+        return f"Obesidade grau II ou grau III, seu imc é de : {imc}"
+    else :
+        return f"valor invalido!" 
 
 
 print(calculadoraImc())
