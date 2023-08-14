@@ -273,7 +273,7 @@ soma()
 somar()
 '''
 # indice de massa corporal (IMC)
-
+'''
 def calculadoraImc():
     altura = float(input('Digite sua Altura em metros'))
     peso = float(input("digite o seu peso"))
@@ -282,9 +282,9 @@ def calculadoraImc():
    
     if imc <= 15 and 18.5:
         return f"Abaxo do peso , Seu imc é de : {imc}"
-    elif imc >= 18.6 and 24.9 :
+    elif imc <= 18.6 and 24.9 :
         return f"Peso normal, seu imc é de : {imc}"
-    elif imc >= 25 and 29.9:
+    elif imc <= 25 and 29.9:
         return f"Acima do Peso, seu imc é de : {imc}"
     elif imc >= 30 and 39.9:
         return f"Obesidade grau I, seu imc é de : {imc}"
@@ -295,7 +295,21 @@ def calculadoraImc():
 
 
 print(calculadoraImc())
+ '''   
+
+# Parametros e argumentos em uma função
+
+def boas_vindas(nome,quantidade): # ---> Parametros
+    print(f'Olá {nome}')
+    print(f'Temos {quantidade} Iphones em estoques')
+
     
+    boas_vindas('marcos',5) # ---> argumentos
+    boas_vindas('lucas',3)
+    boas_vindas('joão',1)
+ 
+
+
 
 
 
