@@ -297,17 +297,99 @@ def calculadoraImc():
 print(calculadoraImc())
  '''   
 
-# Parametros e argumentos em uma função
-
+# Parametros ---> argumento
+'''
 def boas_vindas(nome,quantidade): # ---> Parametros
-    print(f'Olá {nome}')
-    print(f'Temos {quantidade} Iphones em estoques')
+    nome = input('Qual é o seu nome ?')
+    print(f'{nome}, Temos {quantidade} Iphones em estoques')
+  
+boas_vindas('marcos',5) # ---> argumentos
+boas_vindas('lucas',3)
+boas_vindas('joão',1)
+'''
+
+# Argumentos Default e Non-defaul
+# Default = É aquele que voce define o valor no parametro caso nao seja passado um valor para ele
+# Non-default = É aquele que voce não define o valor no parametro mas sim quando for chamar esse parametro
+'''
+def boas_vindas(nome , quantidade = 6): # Parametro
+    nome = input('digite seu nome ?')
+    produto = input('qual produto voce deseja comprar?')
+    print(f'{nome} tem {quantidade} {produto}'.format(nome,quantidade))
+
+boas_vindas('lucas') # ---> argumento 
+'''
+
+# print ou return
+# funções realizam tarefas ou calcula e retorna um valor
+'''
+def cliente1(nome):
+    print(f'Ola {nome}') #  A função print() executa a tarefa mais não retorna nenhum valor ão programa
+
+def cliente2(nome):
+    return f'Ola {nome}' # return ele executou o codigo e retornou um valor para ao programa e armazenou na memoria
+
+cliente1('julia')
+Print(cliente2('ana'))
+'''
+
+# varios argumentos xargs com numeros
+# criar uma função de soma com varios numeros como parâmetro
+'''
+def soma(*numeros):
+    x = 0
+    for num in numeros:
+        x += num**2
+    return x
+
+x = soma(2 , 3 , 4 , 5)     
+print(x)
+'''
+# Varios argumentos xargs nomeando parametros
+# criar uma função armazena numeros e strings (dados)
+   
+def Brasil_Automóveis(**carro):
+   
+   renda = '5 milhões'
+   entrada = '2 milhões e meio'
+   CPF = float(input('informe o seu CPF por favor :'))
+   RG = float (input('informe o seu RG por favor :'))
+
+   input('informe a marca do veiculo que deseja comprar por favor :')
 
     
-    boas_vindas('marcos',5) # ---> argumentos
-    boas_vindas('lucas',3)
-    boas_vindas('joão',1)
- 
+    if carro['marca'] == 'Mercedes' and renda >= '400 Mil':
+        input('qual sua renda mensal? :') 
+        print("Você pode fazer o seguimento do finacimento")  
+    else:
+        print ('Não é possivel realizar o seguimento do finanmento')
+        if entrada >= '291 mil':
+            input('Por favor inseri o valor da entrada do veiculo : ')
+            print ('Parabens sua compra foi realizada com sucesso !.')
+        else:
+            print (f"Infelismente você precisa pagar {entrada} para realizar esta compra.") 
+    if carro['marca'] == 'Ferrari' and renda >= '5 milhões':
+        input('Por favor inseri o valor da renda : ')
+        print ("Você pode fazer o seguimento do finacimento")
+    else:
+        print ('Não é possivel realizar o seguimento do finanmento')
+    if entrada >= '2 molhões e meio':
+        input('Por favor insira o valor da entrada do veículo : ')
+        print ('Parabens sua compra foi realizada com sucesso !.')
+    else:
+        print (f"Infelismente você precisa pagar {entrada} para realizar esta compara.")
+
+
+Brasil_Automóveis(marca= 'Mercedes' ,ccor= 'preta' , motor='10.0', placa= '123KMC345' )
+Brasil_Automóveis(marca= 'Ferrari' ,ccor= 'branca' , motor='200.0', placa= '13245' )
+
+
+
+
+
+
+
+
 
 
 
