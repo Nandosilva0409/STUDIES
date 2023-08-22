@@ -347,27 +347,26 @@ print(x)
 '''
 # Varios argumentos xargs nomeando parametros
 # criar uma função armazena numeros e strings (dados)
+'''
+  def Brasil_Automóveis(**carro):
    
-def Brasil_Automóveis(**carro):
-   
-   renda = '5 milhões'
-   entrada = '2 milhões e meio'
-   CPF = float(input('informe o seu CPF por favor :'))
-   RG = float (input('informe o seu RG por favor :'))
-
-   input('informe a marca do veiculo que deseja comprar por favor :')
+    renda = str('5 milhões')
+    entrada = '2 milhões e meio'
+    CPF = float(input('informe o seu CPF por favor :'))
+    RG = float (input('informe o seu RG por favor :'))
+    input('informe a marca do veiculo que deseja comprar por favor :')
 
     
-    if carro['marca'] == 'Mercedes' and renda >= '400 Mil':
+    if carro['marca'] == 'Mercedes' and renda >= '5 Milhões':
         input('qual sua renda mensal? :') 
         print("Você pode fazer o seguimento do finacimento")  
     else:
         print ('Não é possivel realizar o seguimento do finanmento')
-        if entrada >= '291 mil':
+    if entrada >= '291 mil':
             input('Por favor inseri o valor da entrada do veiculo : ')
             print ('Parabens sua compra foi realizada com sucesso !.')
-        else:
-            print (f"Infelismente você precisa pagar {entrada} para realizar esta compra.") 
+    else:
+         print (f"Infelizmente você precisa pagar {entrada} para realizar esta compra.") 
     if carro['marca'] == 'Ferrari' and renda >= '5 milhões':
         input('Por favor inseri o valor da renda : ')
         print ("Você pode fazer o seguimento do finacimento")
@@ -377,32 +376,13 @@ def Brasil_Automóveis(**carro):
         input('Por favor insira o valor da entrada do veículo : ')
         print ('Parabens sua compra foi realizada com sucesso !.')
     else:
-        print (f"Infelismente você precisa pagar {entrada} para realizar esta compara.")
+        print (f"Infelizmente você precisa pagar {entrada} para realizar esta compara.")
 
 
-Brasil_Automóveis(marca= 'Mercedes' ,ccor= 'preta' , motor='10.0', placa= '123KMC345' )
-Brasil_Automóveis(marca= 'Ferrari' ,ccor= 'branca' , motor='200.0', placa= '13245' )
-
-
-
-
+Brasil_Automóveis(marca= 'Mercedes' ,cor= 'preta' , motor='10.0', placa= '123KMC345' )
+Brasil_Automóveis(marca= 'Ferrari' ,cor= 'branca' , motor='200.0', placa= '13245' )
+'''
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
