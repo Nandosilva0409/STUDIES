@@ -4,6 +4,28 @@
 #variáveis globais global cpf, rg, salario, senha, numero_de_vendas, total_gasto
  #variável local login 
 
+    
+def cadastro_cliente (**cliente): # Area de cadastramento
+    nome = str(input('Qual seu nome ? '))
+    Email = str(input('Digite seu e-mail'))
+    CPF = int(input('Insira seu número de CPF:'))
+    RG = int(input('insira seu número de RG:'))
+    cliente = {'nome':nome,'email':Email ,'cpf':CPF,'rg':RG }
+    return cliente
+ 
+def logar (cliente):
+    email= input("digite o seu EMAIL")
+    if email == cliente['email']:
+        return True
+    else :
+        print ('Usuario ou Senha Incorretos')
+
+def verificar_login (senha):
+    if senha == '1234567890' :
+        print ('Bem Vindo ap sistema')
+    else:
+        print ("Senha incorreta")
+'''
 def atendente(): # Area de Atendimento
 
     print("Bem-Vindo ao Sistema")
@@ -18,14 +40,7 @@ def atendente(): # Area de Atendimento
         return True
     else:
         print('senha incorreta!')
-    
-def cadastrar_cliente (): # Area de cadastramento
-    nome = str(input('Qual seu nome ? '))
-    Email = str(input('Digite seu e-mail'))
-    CPF = int(input('Insira seu número de CPF:'))
-    RG = int(input('insira seu número de RG:'))
-    cliente = {'nome':nome,'email':Email ,'cpf':CPF,'rg':RG }
-    return cliente
+'''
 
 def sistema_compra(**carro): # area de vendas
 
@@ -46,10 +61,13 @@ def estoque(**carro):
         print(f'{marca} {modelo} {cor} {ano}'.format(*lista [i]))
         print('Obrigado por compra em nosso site !')
 
-
+''''
 atendente()
-cadastrar_cliente()
-sistema_compra()
+'''
+cadastro_cliente('nome' , 'email' , 'cpf' , 'rg')
+logar('email')
+verificar_login('1234567890')
+sistema_compra('preço' , 'quantidade' , 'valor_total' )
 estoque()
 
 
